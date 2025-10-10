@@ -2,7 +2,13 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Status](https://img.shields.io/badge/status-active-brightgreen.svg)
 ![Security](https://img.shields.io/badge/security-threat--detection-red.svg)
-# Threat Detection Platform
+# Threat Detection Platform :)
+
+<p align="center">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDBwc3djNmo0NGtlZjYwem5qOGZ5cnU1YzNoZHpyYWcyczBrYzA2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pULj9CGmIcfuzXTPfp/giphy.gif" alt="Glowing Star" width="100">
+  <br>
+  <b>⭐ Please Star this Repo if You Enjoy It! ⭐</b>
+</p>
 
 A real-time security monitoring system that ingests multi-format data sources, performs threat analysis using MITRE ATT&CK framework integration, and provides automated response capabilities.
 
