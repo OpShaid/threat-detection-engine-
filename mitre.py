@@ -1,4 +1,4 @@
-# src/detection/mitre.py
+
 import re
 from typing import List, Dict, Optional
 from functools import lru_cache
