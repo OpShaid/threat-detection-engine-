@@ -1,4 +1,4 @@
-# src/ingestion/base_ingestor.py
+
 import asyncio
 import aiofiles
 from typing import AsyncGenerator, List, Optional
@@ -21,7 +21,7 @@ from src.db import threat_db  # FIX 2: Import the global instance instead of cla
 
 logger = setup_logging()
 
-# ----- Config / Rules -----
+
 suspicious_ports = [22, 3389, 1433, 3306, 5432, 6379, 27017]
 patterns = [
     r"bash\s+-i",
@@ -64,7 +64,6 @@ class Event:
     raw: Optional[str] = None
     source_type: str = ""
 
-# ----- Helpers -----
 def _run_blocking(fn, *args, **kwargs):
     """Run blocking synchronous code in thread pool."""
     return asyncio.get_running_loop().run_in_executor(None, lambda: fn(*args, **kwargs))
@@ -165,7 +164,7 @@ class BaseIngestor(BaseEngine):
         logger.info("Database connection initialized")
 
     async def _flush_batch(self):
-        """FIX 5: Helper method to flush batch buffer to database"""
+
         if self.batch_buffer:
             try:
                 await threat_db.batch_insert(self.batch_buffer)
@@ -175,7 +174,7 @@ class BaseIngestor(BaseEngine):
                 logger.error(f"Failed to flush batch: {e}")
 
     async def _process_threat_analysis(self, ip: str, content: str, source_type: str) -> Event:
-        """FIX 6: Centralized threat processing using database instead of globals"""
+  
         
         # Get data from database instead of globals
         seen_before = await threat_db.is_ip_seen(ip)
